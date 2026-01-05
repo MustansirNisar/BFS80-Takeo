@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form>
+       <div>
+        <label for="user">Username: </label>
+        <input type="text" name="Name" id="user" maxlength="10" minlength="4" placeholder="Enter username">
+        </div>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="Email" id="email" placeholder="Enter Email">
+        <br><br>
+        <label for="pass">Enter Password: </label>
+        <input id="pass" type="password">
+        <br><br>
+        <label for="age" >Enter Age:</label>
+        <input type="number" min="18" max="40" id="age">
+        <br><br>
+        <label for="">Enter your DOB:</label>
+        <input type="date">
+        <br><br>
+        <label for="">Resume:</label>
+        <input type="file" name="" id="">
+        <br><br>
+        <label for="">Color:</label>
+        <input type="color">
+        <br><br>
+        <label for="">Contact Number:</label>
+        <input required type="tel">
+        <br><br>
+        <input type="range">
+        <br><br>
+        <fieldset>
+            <legend>Current Address</legend>
+            <label for="">Country:</label>
+            <input type="text"><br>
+            <label for="">State:</label>
+            <input type="text"><br>
+            <label for="">City:</label>
+            <input type="text"><br>
+            <label for="">Zip Code:</label>
+            <input type="text"><br>
+            <label for="">Flat No./House No.</label>
+            <input type="text">
+        </fieldset>
+        <br><br>
+        <!-- <input type="reset"> -->
+         <!-- <input type="submit" name="" id=""> --> <br>
+          <label for="male">Male</label>
+          <input value="Male" id="male" name="gender" type="radio">
+          <label for="fem">Female</label>
+          <input  id="fem" value="female" name="gender" type="radio">
+          <label for="ot">Other</label>
+          <input value="other" type="radio" name="gender" id="ot">
+            <br><br>
+            <label >Enter your Skills:</label>
+            <input id="html" type="checkbox" value="HTML"><label for="html">HTML</label>
+
+            <input id="py" type="checkbox" value="Python"><label for="py">Python</label>
+
+            <input id="js" type="checkbox" value="JavsScript"><label for="js">Javascript</label>
+
+            <input id="Rc" value="React" type="checkbox"><label for="Rc">React</label>
+            
+          <br><br>
+          <!-- Dropdown List -->
+          <label for="cntry">Select your Country:</label>
+          <select size="4" multiple name="Country" id="cntry">
+            <!-- <option value="">Select Your Country</option> -->          
+            <option value="US">United States</option>
+              <option selected value="Nepal">Nepal</option>
+            <option value="England">England</option>
+            <option value="North Korea">North Korea</option>
+            <option value="Australia">Australia</option>
+          </select>
+          <br><br>
+          <!-- Datalist -->
+           <label for="">Enter your Hobby/Hobbies:</label>
+           <input type="text" list="hobbies">
+           <datalist id="hobbies">
+            <option value="Painting">
+            <option value="Singing">
+            <option value="Gardening">
+            <option value="Pottery">
+            <option value="Poetry">
+            <option value="Calligraphy">
+           </datalist>
+          <br><br>
+           <label for="texta">Your Feedback:</label>
+           <textarea name="Feedback" id="texta" rows="8" cols="30" disabled></textarea>
+          <br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
