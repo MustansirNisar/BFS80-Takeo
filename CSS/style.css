@@ -1,0 +1,42 @@
+    /* Type Selector */
+
+    h1{
+            color: blue;
+            background-color: coral;
+        }
+        h4{
+            color: aqua;
+            background-color: blue;
+        }
+        
+        p{
+            color: blueviolet;
+        }
+
+        /* Id Selector */
+           #heading{
+            color: blue;
+        }
+        #heading3{
+            color: blueviolet;
+        }
+        #para{
+            color: orange;
+        }
+
+        /* Universal Selector */
+          *{
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+          margin: 0; 
+        }
+
+        /* Group Selector */
+           h2, p{
+        color:yellow ;
+       }
+        
+        .bg, #heading, #heading2{
+            color: blue;
+        }
+
+       
