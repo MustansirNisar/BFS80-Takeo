@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        *{
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+          /* margin: 0;  */
+        }
+
+       .bg{
+        background-color: brown;
+       }
+       #heading{
+        color: blue;
+       }
+       #heading3{
+        color:aqua ;
+       } 
+       h2, p{
+        color:yellow ;
+       }
+        
+        .bg, #heading, #heading2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Welcome to my webpage</h1>
+    <h2 id="heading2">This is the first section</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel id voluptatum deserunt cumque nostrum consequatur aut, unde quos tempore inventore, non voluptatem laborum suscipit, dolor consectetur error esse similique harum.</p>
+    <h2 class="bg">Section 2:</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, quia.</p>
+    <div class="bg" >
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, repellat.</p>
+    </div>
+    <h1 class="bg" id="heading3">this is another h1 tag</h1>
+</body>
+</html>
