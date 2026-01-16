@@ -49,9 +49,12 @@
 
 //Ternary operator
 // condition? value_if_true:value_if_flase
-let age = 10;
-// age>18?console.log("You are an adult"):console.log("You are a child")
-age>18?console.log("You are an adult"):
-age>15?console.log("greater than 15 but less than 18"):
-age>12?console.log("grtr than 12"):console.log("You are 10")
+// let age = 10;
+// // age>18?console.log("You are an adult"):console.log("You are a child")
+// age>18?console.log("You are an adult"):
+// age>15?console.log("greater than 15 but less than 18"):
+// age>12?console.log("grtr than 12"):console.log("You are 10")
 
+// let age = Number(prompt("Enter your age: "))
+// console.log("The age of the user is: ", age)
+// console.log(typeof age)
