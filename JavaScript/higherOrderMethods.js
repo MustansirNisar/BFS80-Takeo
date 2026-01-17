@@ -23,12 +23,12 @@ numbers.forEach((num)=>{
 // array.map((currentValue, index, array)=>{
 // })
 
-// let numbers = [2, 3, 4, 5]
-// const newNumbers = numbers.map((num)=>{
-//     return num*2;
-// })
-// console.log("This is the original array: ", numbers)
-// console.log("This is the modified array: ",newNumbers)
+let numbers = [2, 3, 4, 5]
+const newNumbers = numbers.map((num)=>{
+    return num*2;
+})
+console.log("This is the original array: ", numbers)
+console.log("This is the modified array: ",newNumbers)
 
 // filter
 // syntax
@@ -77,5 +77,6 @@ numbers.forEach((num)=>{
 //         return acc;
 // }, [])
 // console.log(doubled)
+
 
 
