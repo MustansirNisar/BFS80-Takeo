@@ -39,5 +39,17 @@
 // console.log(text.indexOf("aSc"))
 
 // charAt().....returns a char at a specific index
-let text = "JavaScript"
-console.log(text.charAt(3))
+// let text = "JavaScript"
+// console.log(text.charAt(3))
+
+// Template Literals
+// let fName = "Sarbesh"
+// console.log(`Hello ${fName}`)
+// let a = 5;
+// let b = 10;
+// console.log(`The sum of ${a} and ${b} is ${a+b}`)
+
+// let poem = "Roses are red,\n Violets are blue"
+let poem = `Roses are red,
+violets are blue.`
+console.log(poem)
