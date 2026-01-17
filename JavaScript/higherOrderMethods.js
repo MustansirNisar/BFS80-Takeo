@@ -8,16 +8,16 @@
 // index...the index of the current element
 // array...the array forEach was called upon
 
-// let fruits = ["Apple", "Mango", "Cherry", "Litchi"]
-// fruits.forEach((current, index, array)=>{
-//         // console.log(current, "is at index", index, "in the array: ", array)
-//         console.log(current.toUpperCase())
-// })
+let fruits = ["Apple", "Mango", "Cherry", "Litchi"]
+fruits.forEach((current, index, array)=>{
+        console.log(current, "is at index", index, "in the array: ", array)
+        console.log(current.toUpperCase())
+})
 
-// let numbers = [2, 3, 4, 5]
-// numbers.forEach((num)=>{
-//     console.log(num*2)
-// })
+let numbers = [2, 3, 4, 5]
+numbers.forEach((num)=>{
+    console.log(num*2)
+})
 // map()
 // syntax   
 // array.map((currentValue, index, array)=>{
@@ -77,4 +77,5 @@
 //         return acc;
 // }, [])
 // console.log(doubled)
+
 
