@@ -35,19 +35,19 @@ console.log("This is the modified array: ",newNumbers)
 // array.filter((currentValue, index, array)=>{
 // })
 
-// const numbers = [1, 2, 3, 4, 5, 6 ,7, 8, 9]
-// const evenNums = numbers.filter((num)=>{
-//     return num%2===0;
-// })
-// // const evenNums = numbers.filter(num=>num%2===0)
+const numbers = [1, 2, 3, 4, 5, 6 ,7, 8, 9]
+const evenNums = numbers.filter((num)=>{
+    return num%2===0;
+})
+// const evenNums = numbers.filter(num=>num%2===0)
 // console.log(evenNums)
 
 
-// let fNames = ["Sarbesh", "Kabita", "Kreetan", "Hemanth"]
-// const newNames = fNames.filter((name)=>{
-//     return name.length>6;
-// })
-// console.log(newNames)
+let fNames = ["Sarbesh", "Kabita", "Kreetan", "Hemanth"]
+const newNames = fNames.filter((name)=>{
+    return name.length>6;
+})
+console.log(newNames)
 
 
 // reduce()
@@ -77,6 +77,7 @@ console.log("This is the modified array: ",newNumbers)
 //         return acc;
 // }, [])
 // console.log(doubled)
+
 
 
 
