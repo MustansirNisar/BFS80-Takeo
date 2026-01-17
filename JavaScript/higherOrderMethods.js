@@ -57,26 +57,27 @@ console.log(newNames)
 // accumulator...The running total or accumulated result
 // initalValue...The starting value for the accumulator
 
-// const numbers = [1, 2, 3, 4, 5, 6 ,7, 8, 9]
-// let initalValue = 0;
-// const sum = numbers.reduce((acc, curr)=>{
-//         return acc + curr;
-// }, initalValue)
-// console.log(sum)
-// const numbers = [1, 24, 33, 12, 2, 4, 40, 9]
-// let initialValue = 0;
-// const largest = numbers.reduce((acc, curr)=>{
-//         return acc>curr?acc:curr
-// }, initialValue)
-// console.log(largest)
-//Homework...find the smallest number from this array
+const numbers = [1, 2, 3, 4, 5, 6 ,7, 8, 9]
+let initalValue = 0;
+const sum = numbers.reduce((acc, curr)=>{
+        return acc + curr;
+}, initalValue)
+console.log(sum)
+const numbers = [1, 24, 33, 12, 2, 4, 40, 9]
+let initialValue = 0;
+const largest = numbers.reduce((acc, curr)=>{
+        return acc>curr?acc:curr
+}, initialValue)
+console.log(largest)
+Homework...find the smallest number from this array
 
-// let numbers = [1,2,3,4]
-// let doubled = numbers.reduce((acc, num)=>{
-//         acc.push(num*2)
-//         return acc;
-// }, [])
-// console.log(doubled)
+let numbers = [1,2,3,4]
+let doubled = numbers.reduce((acc, num)=>{
+        acc.push(num*2)
+        return acc;
+}, [])
+console.log(doubled)
+
 
 
 
