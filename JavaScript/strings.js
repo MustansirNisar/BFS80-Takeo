@@ -39,8 +39,8 @@
  console.log(text.indexOf("aSc"))
 
 // charAt().....returns a char at a specific index
-// let text = "JavaScript"
-// console.log(text.charAt(3))
+ let text = "JavaScript"
+ console.log(text.charAt(3))
 
 // Template Literals
 // let fName = "Sarbesh"
@@ -53,6 +53,7 @@
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
 
 
 
