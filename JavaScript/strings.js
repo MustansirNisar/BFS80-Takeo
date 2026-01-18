@@ -4,13 +4,13 @@
  console.log(fName[3])
 
 //tuUpperCase() and toLowerCase....convert the string to upper or lower case
-// let city = "Srinagar"
-// city.toUpperCase()
-// console.log(city)
-// let newCity = city.toUpperCase();
-// console.log(newCity)
-// console.log(city.toUpperCase());
-// console.log(city.toLowerCase());
+ let city = "Srinagar"
+ city.toUpperCase()
+ console.log(city)
+ let newCity = city.toUpperCase();
+ console.log(newCity)
+ console.log(city.toUpperCase());
+ console.log(city.toLowerCase());
 
 // trim()...removes the whitespaces from both ends
 // let text = "  Something   "
@@ -53,4 +53,5 @@
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
 
