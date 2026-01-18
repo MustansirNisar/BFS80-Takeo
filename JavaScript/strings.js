@@ -43,16 +43,17 @@
  console.log(text.charAt(3))
 
 // Template Literals
-// let fName = "Sarbesh"
-// console.log(`Hello ${fName}`)
-// let a = 5;
-// let b = 10;
-// console.log(`The sum of ${a} and ${b} is ${a+b}`)
+ let fName = "Sarbesh"
+ console.log(`Hello ${fName}`)
+ let a = 5;
+ let b = 10;
+ console.log(`The sum of ${a} and ${b} is ${a+b}`)
 
 // let poem = "Roses are red,\n Violets are blue"
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
 
 
 
