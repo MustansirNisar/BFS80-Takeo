@@ -12,16 +12,16 @@
  console.log(city.toUpperCase());
  console.log(city.toLowerCase());
 
-// trim()...removes the whitespaces from both ends
-// let text = "  Something   "
-// console.log(text)
-// console.log(text.trim())
+ trim()...removes the whitespaces from both ends
+ let text = "  Something   "
+ console.log(text)
+ console.log(text.trim())
 
 //slice(start, end)....extracts a protion of the string
-// let text = "Something"
-// console.log(text.slice(0,4))
-// console.log(text.slice(-4,-2))
-// console.log(text.slice(3))
+ let text = "Something"
+ console.log(text.slice(0,4))
+ console.log(text.slice(-4,-2))
+ console.log(text.slice(3))
 
 // concat()....joins two or more strings
 // let str1 = "JavaScript"
@@ -53,5 +53,6 @@
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
 
 
