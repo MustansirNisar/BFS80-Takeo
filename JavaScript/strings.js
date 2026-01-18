@@ -1,7 +1,7 @@
 // let fName = "Sarbesh";
-// console.log(fName.length)  //Returns the number of characters in a string including white spaces
-// console.log(fName[2])
-// console.log(fName[3])
+ console.log(fName.length)  //Returns the number of characters in a string including white spaces
+ console.log(fName[2])
+ console.log(fName[3])
 
 //tuUpperCase() and toLowerCase....convert the string to upper or lower case
 // let city = "Srinagar"
@@ -53,3 +53,4 @@
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
