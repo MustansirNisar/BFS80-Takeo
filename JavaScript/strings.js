@@ -24,9 +24,9 @@
  console.log(text.slice(3))
 
 // concat()....joins two or more strings
-// let str1 = "JavaScript"
-// let str2 = "React"
-// console.log(str1.concat(" ",str2))
+ let str1 = "JavaScript"
+ let str2 = "React"
+ console.log(str1.concat(" ",str2))
 
 // replace()....returns a new string with the first occrence of a substring replaced by a new value
 // let text = "I like cars as cars are very comfortable"
@@ -53,6 +53,7 @@
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
 
 
 
