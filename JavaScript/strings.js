@@ -34,9 +34,9 @@
  console.log(text.replaceAll("cars", "bikes"))
 
 //indexof()...returns the position of the first occurence of a substring
-// let text = "JavaScript"
-// console.log(text.indexOf("a"))
-// console.log(text.indexOf("aSc"))
+ let text = "JavaScript"
+ console.log(text.indexOf("a"))
+ console.log(text.indexOf("aSc"))
 
 // charAt().....returns a char at a specific index
 // let text = "JavaScript"
@@ -53,6 +53,7 @@
 let poem = `Roses are red,
 violets are blue.`
 console.log(poem)
+
 
 
 
