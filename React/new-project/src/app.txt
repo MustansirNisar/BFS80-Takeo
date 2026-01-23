@@ -1,0 +1,114 @@
+.........props...........
+
+import Contact from "./Components/Contact"
+
+function App() {
+  let fName = "Hemanth"
+
+  return (
+
+    <>
+    <h1>This is the App Section:</h1>
+     <Contact firstName = {fName} age= {22} country={"India"} />
+    </>
+       
+    
+  )
+}
+
+export default App
+...Passing an Array as props...
+import React from 'react'
+import Greet from './Components/Greet'
+
+function App() {
+  let coders = ["Hemanth", "Sarbesh", "Kabita", "Kreetan"]
+  return (
+    <div>
+      <h1>This is the App component</h1>
+      {/* <Greet fNames = {coders}/> */}
+      <Greet coder1 = {coders[0]} coder2 = {coders[1]} coder3 = {coders[2]} coder4 = {coders[3]}/>
+    </div >
+  )
+}
+
+export default App
+......Object as props........
+import React from 'react'
+import Greet from './Components/Greet'
+
+function App() {
+  let employee={
+    name: "Sarbesh",
+    id: 1,
+    salary: 400000
+  }
+   let employee1={
+    name: "Kabita",
+    id: 2,
+    salary: 400000
+  }
+  return (
+    <div>
+      <Greet details = {employee} />
+      <Greet details = {employee1} />
+    </div>
+  )
+}
+
+export default App
+
+......children props........
+import React from 'react'
+import User from './Components/User'
+import Info from './Components/Info'
+
+function App() {
+  return (
+    <div>
+      <Info color="blue">
+        <h2>Name: Hemanth</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nam.</p>
+        <h5>I am really having fun</h5>
+      </Info>
+      <Info color="red">
+        <h2>Name: Kreetan</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nam.</p>
+        <h5>I am really having fun</h5>
+      </Info>
+      <Info color="green">
+        <h2>Name: Kabita</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nam.</p>
+        <h5>I am really having fun</h5>
+      </Info>
+      <Info >
+        <h2>Name: Sarbesh</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nam.</p>
+        <h5>I am really having fun</h5>
+      </Info>
+    </div>
+  )
+}
+
+export default App
+........click Event and Function Call.........
+import React from 'react'
+
+function App() {
+  function greet(fName){
+    alert("How are you doing? " + fName)
+  }
+ 
+  return (
+    <div>
+      {/* <button onClick={greet}>Click me!</button> */}
+      {/* <button onClick={()=>greet("Kabita")}>Click me!</button> */}
+      <button onClick={()=>alert("How are you doing")}>Click me!</button>
+
+    </div>
+  )
+}
+
+export default App
+
+
