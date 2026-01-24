@@ -15,10 +15,10 @@
 // console.log(a != b)
 
 //Type Coercion
-// let a = 10;
-// let b = 5;
-// let c = "5";
-// let d = "abc"
+ let a = 10;
+ let b = 5;
+ let c = "5";
+ let d = "abc"
 
 // console.log(a+b)
 // console.log(a+c)
@@ -29,5 +29,6 @@
 // let a = "1234"
 // let b = Number(a)
 // console.log(typeof b)
+
 
 
