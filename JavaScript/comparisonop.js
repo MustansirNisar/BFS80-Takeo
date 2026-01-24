@@ -20,15 +20,16 @@
  let c = "5";
  let d = "abc"
 
-// console.log(a+b)
-// console.log(a+c)
-// console.log(a-c)
-// console.log(a+d)
-// // console.log(c-d)
+ console.log(a+b)
+ console.log(a+c)
+ console.log(a-c)
+ console.log(a+d)
+ console.log(c-d)
 
 // let a = "1234"
 // let b = Number(a)
 // console.log(typeof b)
+
 
 
 
