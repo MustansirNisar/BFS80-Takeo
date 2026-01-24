@@ -7,12 +7,12 @@
  console.log(a !== c)
  console.log(a == c)
 
-// console.log(a > b)
-// console.log(a < b)
-// console.log(a >= b)
-// console.log(a <= b)
-// console.log(a == b)
-// console.log(a != b)
+ console.log(a > b)
+ console.log(a < b)
+ console.log(a >= b)
+ console.log(a <= b)
+ console.log(a == b)
+ console.log(a != b)
 
 //Type Coercion
  let a = 10;
@@ -29,6 +29,7 @@
 // let a = "1234"
 // let b = Number(a)
 // console.log(typeof b)
+
 
 
 
