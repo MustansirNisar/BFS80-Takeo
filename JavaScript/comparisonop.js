@@ -1,6 +1,6 @@
-// let a = 10;
-// let b = 5;
-// let c = "10";
+ let a = 10;
+ let b = 5;
+ let c = "10";
  console.log(a == c)  //true...checks only the value
  console.log(a === c) //false...checks both the value and type
  console.log(a != c)
@@ -29,4 +29,5 @@
 // let a = "1234"
 // let b = Number(a)
 // console.log(typeof b)
+
 
