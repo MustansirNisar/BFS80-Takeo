@@ -111,4 +111,193 @@ function App() {
 
 export default App
 
+.....Normal Variable....
+import React from 'react'
+
+function App() {
+  let phone = "samsung"
+
+  let updatePhone = ()=>{
+    phone="Nothing Phone"
+    console.log(phone)
+  }
+  return (
+    <div>
+      <button onClick={updatePhone}>Update Phone</button>
+      <h1>{phone}</h1>
+    </div>
+  )
+}
+
+export default App
+.....State Example....
+import React from 'react'
+import { useState } from 'react'
+
+function App() {
+let[phone, setPhone] = useState("Samsung")
+let changePhone = ()=>{
+  setPhone("Nothing Phone")
+}
+  return (
+    <div>
+      <button onClick={changePhone}>Change Phone</button>
+      <h1>{phone}</h1>
+    </div>
+  )
+}
+
+export default App
+
+....Counter using useState().....
+import React, { useState } from 'react'
+
+function App() {
+  let[count, setCount] = useState(0);
+  let[reverse, setReverse] = useState(200)
+  // let update = ()=>{
+  //   setCount(count+1)
+  // }
+  return (
+    <div>
+      <button onClick={()=>setCount(count+1)}>Update Counter</button>
+      <h1>Count: {count}</h1>
+      <br /><br />
+      <h1>Count: {reverse}</h1>
+      <button onClick={()=>setReverse(reverse-1)}>Reverse Counter</button>
+
+    </div>
+  )
+}
+
+export default App
+....Toggling...
+import React, { useState } from 'react'
+import Learner from './Components/Learner'
+
+function App() {
+  let[show, setShow] = useState(true)
+  return (
+    <div>
+      <h1>Toggling</h1>
+      {/* {
+        show?<h1>Sarbesh, you are welcome</h1>:null
+      } */}
+      <button onClick={()=>setShow(!show)}>Toggle</button>
+      {
+        show?<Learner/>:null
+      }
+    </div>
+  )
+}
+
+export default App
+....Conditional Rendering...
+import React, { useState } from 'react'
+
+function App() {
+  let[count, setCount] = useState(0)
+  return (
+    <div>
+      <button onClick={()=>setCount(count+1)}>Update</button>
+      <h1>Count: {count}</h1>
+      {
+        count==0?<h1>Nothing at All</h1>:
+        count==1?<h1>Something is coming</h1>:
+        count==2?<h1>Do you see something</h1>:
+        count==3?<h1>Here you go</h1>:
+        count==4?<h1>You should already see it</h1>:
+        <h1>There actually was nothing at all</h1>
+      }
+    </div>
+  )
+}
+
+export default App
+....controlled inputs....
+import React, { useState } from 'react'
+
+function App() {
+  let[value, setValue] = useState("")
+  let[age, setAge] = useState()
+  return (
+    <div>
+      <input type="text" value={value} placeholder='Enter Username' onChange={(event)=>setValue(event.target.value)} />
+      <input type="number" value={age} placeholder='Enter your age' onChange={(event)=>setAge(event.target.value)} />
+      <h1>{age}</h1>
+      <h1>{value}</h1>
+      <br /><br />
+      <button onClick={()=>{setValue("");setAge("")}}>Clear Value</button>
+
+    </div>
+  )
+}
+
+export default App
+...Controlling Checkboxes....
+import React, { useState } from 'react'
+
+function App() {
+  let[skill, setSkill] = useState([])
+  let getSkill = (event)=>{
+    // console.log(event.target.value, event.target.checked)
+    if(event.target.checked){
+      setSkill([...skill,event.target.value])
+    }
+    else{
+      setSkill([...skill.filter((item)=>item!=event.target.value)])
+    }
+  }
+  return (
+    <div>
+      <h2>Select your Skills: </h2>
+      <label htmlFor="py">Python</label>
+      <input type="checkbox" value={"Python"} id='py' onChange={getSkill} />
+      <br /><br />
+      <label htmlFor="js">JavaScript</label>
+      <input type="checkbox" value={"JavaScript"} id='js' onChange={getSkill} />
+      <br /><br />
+      <label htmlFor="c#">C#</label>
+      <input type="checkbox" value={"C#"} id='c#' onChange={getSkill} />
+      <br /><br />
+      <label htmlFor="rust">Rust</label>
+      <input type="checkbox" value={"Rust"} id='rust' onChange={getSkill} />
+      <h1>{skill.toString()}</h1>
+    </div>
+  )
+}
+
+export default App
+.....map method....
+import React from 'react'
+
+function App() {
+  let skills = ["Python", "Js", "Node", "React"]
+  return (
+    <div>
+      {/* <h2>Skills: {skills.toString()}</h2> */}
+      <h3>Skills:</h3>
+      {/* <ul>
+        <li>{skills[0]}</li>
+        <li>{skills[1]}</li>
+        <li>{skills[2]}</li>
+        <li>{skills[3]}</li>
+      </ul> */}
+      {/* {
+        skills.map((item, index)=>{
+          console.log(item,index)
+        })
+      } */}
+    <ul>
+      {
+        skills.map((item)=>(
+          <li>{item}</li>
+        ))
+      }
+    </ul>
+    </div>
+  )
+}
+
+export default App
 
