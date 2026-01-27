@@ -1,19 +1,32 @@
-import Something, { Contact }  from "./Components/About"
+import React from 'react'
 
 function App() {
-  let greeting = <h1>Hello, Hemanth!</h1>
-
+  let userInfo = [
+    {
+      name: "Sarbesh",
+      id: 1,
+      emial: "s@test.com"
+    },
+    {
+      name: "Kabita",
+      id: 2,
+      emial: "k@test.com"
+    },
+    {
+      name: "Kreetan",
+      id: 3,
+      emial: "Kr@test.com"
+    },
+    {
+      name: "Hemanth",
+      id: 4,
+      emial: "H@test.com"
+    }
+  ]
   return (
-
-    <>
-      <h1>Welcome to my web page</h1>
-      {greeting}
-      <Something/>
-      <Contact/>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, delectus!</p>
-    </>
-       
-    
+    <div>
+      
+    </div>
   )
 }
 
