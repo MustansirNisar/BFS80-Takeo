@@ -301,3 +301,239 @@ function App() {
 
 export default App
 
+....Rendering Lists....
+import React from 'react'
+
+function App() {
+  let userInfo = [
+    ["Name", "Id", "Email"],
+    {
+      name: "Sarbesh",
+      id: 1,
+      email: "s@test.com"
+    },
+    {
+      name: "Kabita",
+      id: 2,
+      email: "k@test.com"
+    },
+    {
+      name: "Kreetan",
+      id: 3,
+      email: "Kr@test.com"
+    },
+    {
+      name: "Hemanth",
+      id: 4,
+      email: "H@test.com"
+    },
+      {
+      name: "User",
+      id: 5,
+      email: "user@test.com"
+    }
+  ]
+  return (
+    <div>
+      <table border={1} style={{borderCollapse:"collapse"}}>
+        <caption>User Data</caption>
+        <thead>
+          <tr>
+            <th>{userInfo[0][0]}</th>
+            <th>{userInfo[0][1]}</th>
+            <th>{userInfo[0][2]}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            userInfo.slice(1).map((item)=>(
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.id}</td>
+                <td>{item.email}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+
+
+
+      {/* <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sarbesh</td>
+            <td>1</td>
+            <td>s@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Sarbesh</td>
+            <td>1</td>
+            <td>s@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Sarbesh</td>
+            <td>1</td>
+            <td>s@gmail.com</td>
+          </tr>
+        </tbody>
+      </table> */}
+    </div>
+  )
+}
+
+export default App
+.....Reusable component...
+import React from 'react'
+import NewUser from './Components/NewUser'
+
+function App() {
+  let userInfo = [
+    {
+      name: "Sarbesh",
+      id: 1,
+      email: "s@test.com"
+    },
+    {
+      name: "Kabita",
+      id: 2,
+      email: "k@test.com"
+    },
+    {
+      name: "Kreetan",
+      id: 3,
+      email: "Kr@test.com"
+    },
+    {
+      name: "Hemanth",
+      id: 4,
+      email: "H@test.com"
+    },
+      {
+      name: "User",
+      id: 5,
+      email: "user@test.com"
+    }
+  ]
+  return (
+    <div>
+      {
+        userInfo.map((user)=>(
+          <div key={user.id}>
+            <NewUser data = {user}/>
+          </div>
+        ))
+      }
+    </div>
+  )
+}
+
+export default App
+...useEffect()....
+import React, { useEffect, useState } from 'react'
+import Effect from './Components/Effect';
+
+function App() {
+  let[count, setCount] = useState(0);
+  let[dec, setDec] = useState(100)
+  // function greet(){
+  //   console.log("How are you doing?")
+  // }
+
+  // useEffect(()=>{
+  // greet();
+
+  // }, [])
+  //  useEffect(()=>{
+  // greet();
+
+  // }, [count])
+  return (
+    <div>
+      <h1>Welcome to my web page</h1>
+      <button onClick={()=>setCount(count+1)}>Count:{count}</button>
+      <button onClick={()=>setDec(dec-1)}>downCount:{dec}</button>
+      <Effect count={count} data={dec}/>
+    </div>
+  )
+}
+
+export default App
+
+....Component Lifecycle....
+import React, { useEffect, useState } from 'react'
+import Effect from './Components/Effect';
+
+function App() {
+  let[count, setCount] = useState(0);
+  let[dec, setDec] = useState(100);
+  let[display, setDisplay] = useState(true)
+ 
+  return (
+    <div>
+      <h1>Welcome to my web page</h1>
+      
+      <button onClick={()=>setCount(count+1)}>Count:{count}</button>
+      <button onClick={()=>setDec(dec-1)}>downCount:{dec}</button>
+      <br /><br />
+      
+      <button onClick={()=>setDisplay(!display)}>Toggle</button>
+      {
+        display?<Effect count={count} data={dec}/>:null
+      }
+      
+    </div>
+  )
+}
+
+export default App
+
+....Adding Styles....
+import React from 'react'
+// import './App.css'
+import Another from './Components/Another'
+import styles from './App.module.css'
+import styled from 'styled-components'
+function App() {
+  let nStyle = {
+    color: "crimson",
+    backgroundColor: "aqua",
+    border: "2px solid black"
+  }
+  const Title = styled.h1`
+  color: purple;
+  // font-size: 10px;
+  border: 2px dashed red;
+  
+  `
+  const Butn = styled.button`
+    color: red;
+    background-color: aqua;
+  `
+  return (
+    <div>
+      <button>Click me</button>
+      <Butn>Click me!</Butn>
+      <Title> This is a styled component </Title>
+      <h1 id='heading' className={styles.newClass} >Welcome to my web page</h1>
+      <hr />
+      <h4 id='heading4'>My Skills:</h4>
+      <ul id='list'>
+        <li >HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ul>
+      <Another/>
+    </div>
+  )
+}
+
+export default App
