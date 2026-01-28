@@ -1,0 +1,14 @@
+#heading{
+    color: aqua;
+    background-color: brown;
+    width: 400px;
+    border: 2px dashed violet;
+}
+#list{
+    color: crimson;
+    background-color: chartreuse;
+    width: 200px;
+}
+h4{
+    color: darkorange;
+}
