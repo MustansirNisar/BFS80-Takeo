@@ -1,31 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 function App() {
-  let userInfo = [
-    {
-      name: "Sarbesh",
-      id: 1,
-      emial: "s@test.com"
-    },
-    {
-      name: "Kabita",
-      id: 2,
-      emial: "k@test.com"
-    },
-    {
-      name: "Kreetan",
-      id: 3,
-      emial: "Kr@test.com"
-    },
-    {
-      name: "Hemanth",
-      id: 4,
-      emial: "H@test.com"
-    }
-  ]
+  const refInput = useRef(null)
+  let handleInput = ()=>{
+    console.log(refInput)
+    refInput.current.focus()
+    refInput.current.style.color = "orange"
+    refInput.current.placeholder = "Enter something over here"
+  }
   return (
     <div>
-      
+      <input ref={refInput} type="text" placeholder='Enter Username' />
+      <button onClick={handleInput}>Focus</button>
     </div>
   )
 }
