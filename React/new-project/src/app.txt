@@ -537,3 +537,134 @@ function App() {
 }
 
 export default App
+
+......useRef()......
+import React, { useRef } from 'react'
+
+function App() {
+  const refInput = useRef(null)
+  let handleInput = ()=>{
+    // console.log(refInput)
+    refInput.current.focus()
+    refInput.current.style.color = "orange"
+    refInput.current.placeholder = "Enter something over here"
+  }
+  const toggleInput = ()=>{
+    if(refInput.current.style.display != "none"){
+      refInput.current.style.display = "none"
+    }
+    else{
+      refInput.current.style.display = "inline"
+    }
+  }
+  function greet(){
+    console.log("How are you doing?")
+  }
+  greet();
+  return (
+    <div>
+      <button onClick={toggleInput}>Toggle Input</button>
+      <input ref={refInput} type="text" placeholder='Enter Username' />
+      <button onClick={handleInput}>Focus</button>
+    </div>
+  )
+}
+
+export default App
+......Direct DOM access vs useRef()......
+import React, { useRef } from 'react'
+
+function App() {
+
+  // const handleForm = (event)=>{
+  //   event.preventDefault();
+  //   // console.log(event)
+  //   let user = document.querySelector("#user").value;
+  //   console.log("User: ", user);
+  //   let pass = document.querySelector("#pass").value;
+  //   console.log("Password: ", pass)
+  // }
+  const userRef = useRef();
+  const passRef = useRef();
+  const handleRef = (event)=>{
+    event.preventDefault();
+    let user = userRef.current.value;
+    let pass = passRef.current.value;
+    console.log("user: ", user, "Password:", pass)
+  }
+  return (
+    <div>
+      {/* <form onSubmit={handleForm}>
+        <input type="text" id='user' placeholder='Enter username' />
+        <br /><br />
+        <input type="password" id='pass' placeholder='Enter password' />
+        <br /><br />
+        <button>Submit</button>
+      </form> */}
+      <br /><br />
+       <form onSubmit={handleRef}>
+        <input ref={userRef} type="text" id='user' placeholder='Enter username' />
+        <br /><br />
+        <input ref={passRef} type="password" id='pass' placeholder='Enter password' />
+        <br /><br />
+        <button>Submit</button>
+      </form>
+    </div>
+  )
+}
+
+export default App
+......
+context API
+........
+import React, { useState } from 'react'
+import University from './Components/University'
+import { courseContext } from './Components/DataContext'
+
+function App() {
+  let course1 = "Web Dev"
+  let[course, setCourse] = useState("");
+  return (
+    <div style={{backgroundColor:"aqua", border:"2px solid black", padding:"10px", textAlign:"center"}}>
+      <courseContext.Provider value={course}>
+        <select value={course} onChange={(event)=>setCourse(event.target.value)} name="" id="" style={{backgroundColor:"red", width:"300px", height:"60px", fontSize:"40px", border:"4px solid green"}}>
+          <option value="">Select Course</option>
+          <option value="DBMS">DBMS</option>
+          <option value="Software Engineering">Software Engineering</option>
+          <option value="Blockchain">Blockchain</option>
+          <option value="Soft Computing">Soft Computing</option>
+          <option value="Artificial Intelligence">Artificial Intelligence</option>
+        </select>
+        <button onClick={()=>setCourse("")}>Clear</button>
+       <h1>Container</h1>
+        <University/>
+      </courseContext.Provider>
+      
+    </div>
+  )
+}
+
+export default App
+....lazy loading...
+import React, { lazy, Suspense, useState } from 'react'
+// import Customer from './Components/Customer'
+let Compn = lazy(()=>import('./Components/Customer'))
+
+function App() {
+  let[display, setDisplay] = useState(false)
+  return (
+    <div>
+      <h1>This is the main component</h1>
+      <button onClick={()=>setDisplay(!display)}>Load Customer</button>
+      <hr />
+      {/* {
+        display?<Customer/>:null
+      } */}
+      {
+        display?<Suspense fallback={<h3>Loading.....</h3>}> <Compn/> </Suspense>:null
+      }
+    </div>
+  )
+}
+
+export default App
