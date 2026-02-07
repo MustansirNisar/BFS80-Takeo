@@ -27,8 +27,8 @@ console.log(student["isRegistered"])
 //     age: 24
 // }
 // //Adding a new property
-// student.city = "New York"
-// // console.log(student)
+student.city = "New York"
+console.log(student)
 // //Updating existing properties
 // student.age = 20;
 // // console.log(student)
@@ -112,5 +112,6 @@ for(let abc in student){
     console.log(abc, student.abc)
 
 }
+
 
 
