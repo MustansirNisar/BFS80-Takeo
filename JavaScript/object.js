@@ -12,7 +12,7 @@ let student = {
     id: 1,
     isRegistered: true
 }
-// console.log(student)
+console.log(student)
 // console.log(typeof student)
 //Accessing Object Properties
 // console.log(student.fName)
@@ -112,3 +112,4 @@ for(let abc in student){
     console.log(abc, student.abc)
 
 }
+
