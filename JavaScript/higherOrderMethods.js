@@ -69,7 +69,7 @@ const largest = numbers.reduce((acc, curr)=>{
         return acc>curr?acc:curr
 }, initialValue)
 console.log(largest)
-Homework...find the smallest number from this array
+// Homework...find the smallest number from this array
 
 let numbers = [1,2,3,4]
 let doubled = numbers.reduce((acc, num)=>{
@@ -77,6 +77,7 @@ let doubled = numbers.reduce((acc, num)=>{
         return acc;
 }, [])
 console.log(doubled)
+
 
 
 
