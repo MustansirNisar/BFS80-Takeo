@@ -20,12 +20,12 @@ console.log(student.id)
 console.log(student["course"])
 console.log(student["isRegistered"])
 
-// let student = {
-//     fName: "Hemanth",
-//     id: 2,
-//     course: "Software Engineering",
-//     age: 24
-// }
+let student = {
+    fName: "Hemanth",
+    id: 2,
+    course: "Software Engineering",
+    age: 24
+}
 // //Adding a new property
 student.city = "New York"
 console.log(student)
@@ -112,6 +112,7 @@ for(let abc in student){
     console.log(abc, student.abc)
 
 }
+
 
 
 
