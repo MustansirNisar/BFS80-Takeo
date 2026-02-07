@@ -5,13 +5,13 @@
 //     key3: value3
 // }
 
-// let student = {
-//     fName: "Sarbesh",
-//     age: 23,
-//     course: "Full Stack Dev",
-//     id: 1,
-//     isRegistered: true
-// }
+let student = {
+    fName: "Sarbesh",
+    age: 23,
+    course: "Full Stack Dev",
+    id: 1,
+    isRegistered: true
+}
 // console.log(student)
 // console.log(typeof student)
 //Accessing Object Properties
@@ -110,4 +110,5 @@ let student = {
 // for...in loop
 for(let abc in student){
     console.log(abc, student.abc)
+
 }
