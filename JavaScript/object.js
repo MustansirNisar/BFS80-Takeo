@@ -33,8 +33,8 @@ console.log(student)
 student.age = 20;
 console.log(student)
 // //Deleting a property
-// delete student.course;
-// console.log(student)
+delete student.course;
+console.log(student)
 
 // let student = {
 //     fName: "Hemanth",
@@ -112,6 +112,7 @@ for(let abc in student){
     console.log(abc, student.abc)
 
 }
+
 
 
 
