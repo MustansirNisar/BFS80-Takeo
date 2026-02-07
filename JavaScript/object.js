@@ -15,10 +15,10 @@ let student = {
 console.log(student)
 // console.log(typeof student)
 //Accessing Object Properties
-// console.log(student.fName)
-// console.log(student.id)
-// console.log(student["course"])
-// console.log(student["isRegistered"])
+console.log(student.fName)
+console.log(student.id)
+console.log(student["course"])
+console.log(student["isRegistered"])
 
 // let student = {
 //     fName: "Hemanth",
@@ -112,4 +112,5 @@ for(let abc in student){
     console.log(abc, student.abc)
 
 }
+
 
